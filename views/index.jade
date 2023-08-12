@@ -1,0 +1,30 @@
+extends layout
+
+// The content block that extends the layout template
+block content
+  // Container for the header section
+  div(class="header-con")
+    h1(class="header-main") Welcome to Basic Chat App
+    p(class="header-sub") This is my first attempt at creating an application using Express, Node.js, and MongoDB. Feel free to leave a message
+
+  // List of messages
+  ul(class="message-list")
+    // Loop through each user in the message_list array
+    each user in message_list 
+      li(class="message-list-item")
+        // Display the user's message
+        p(class="message") #{user.message} 
+        // Display the username associated with the message
+        p(class="username")  - #{user.username}
+
+  // Form for submitting new messages
+  form(method='POST' action="")
+    div.form-group(class="form-div")
+      label(for='username')
+        // Input field for entering the username, with a placeholder and max length
+        input#username.form-control(class="username-ipt" type='text' placeholder='Username' name='username' required='true' maxlength="20")
+      label(for='message')
+        // Textarea for entering the message, with placeholder and max length
+        textarea#message.for-control(class="message-ipt" cols="30" rows="10" type='text' placeholder='Message (Message must be less than 1000 characters)' name='message' required='true' )
+      // Button for submitting the form
+      button(class="submit-btn" type='submit') Submit

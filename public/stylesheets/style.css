@@ -1,0 +1,124 @@
+/* Global Styles */
+body {
+  padding: 0;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00b7ff;
+}
+
+* {
+  background-color: white;
+}
+
+/* Header Styles */
+.header-con {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-main,
+.header-sub {
+  text-align: center;
+}
+
+/* Form Styles */
+label {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0.5rem;
+}
+
+.form-div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Message List Styles */
+.message-list {
+  list-style: none;
+  width: 50%;
+  margin: auto;
+  height: 500px;
+  overflow-y: scroll;
+  scroll-margin-bottom: auto;
+  border: 1px solid #888;
+  border-radius: 5px;
+}
+
+.message {
+  margin: 10px;
+  padding: 10px;
+  background-color: #f2f2f2;
+  border-radius: 8px;
+}
+
+.username {
+  font-size: 12px;
+  color: #888;
+  width: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  white-space: nowrap;
+}
+
+.message-list-item {
+  margin: 0.25rem;
+  display: flex;
+}
+
+/* Input and Button Styles */
+.username-ipt,
+.message-ipt,
+.submit-btn {
+  width: 50%;
+  padding: 0.25rem;
+  border-radius: 5px;
+  border: 1px solid #888;
+  margin: 0.25rem;
+}
+
+.submit-btn:hover {
+  background-color: #888;
+  color: white;
+  transition: all 0.4s ease-in-out;
+}
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 900px) {
+  .message-list {
+    width: 75%;
+  }
+
+  .message-list {
+    height: 400px;
+  }
+
+  .username-ipt,
+  .message-ipt,
+  .submit-btn {
+    width: 75%;
+  }
+
+  .submit-btn {
+    height: 50px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .message-list {
+    width: 95%;
+  }
+
+  .message-list {
+    height: 300px;
+  }
+}

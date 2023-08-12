@@ -1,0 +1,14 @@
+extends layout
+// Extends the layout template
+
+block content
+  // Defines the content block that extends the layout
+
+  h1= message
+  // Displays the value of the "message" variable as a heading
+
+  h2= error.status
+  // Displays the HTTP status code associated with the error as a subheading
+
+  pre #{error.stack}
+  // Displays the stack trace of the error in a preformatted text block
