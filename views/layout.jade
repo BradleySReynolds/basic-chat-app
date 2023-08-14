@@ -13,3 +13,9 @@ html
   body
     // The main content of the webpage will be inserted here using blocks
     block content
+
+    script.
+      document.addEventListener('DOMContentLoaded', () => {
+        const container = document.querySelector('.message-list');
+        container.scrollTop = container.scrollHeight;
+      })

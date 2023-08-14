@@ -42,13 +42,18 @@ label {
 }
 
 /* Message List Styles */
+.wrapper {
+  overflow: auto;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
 .message-list {
   list-style: none;
   width: 50%;
   margin: auto;
   height: 500px;
   overflow-y: scroll;
-  scroll-margin-bottom: auto;
   border: 1px solid #888;
   border-radius: 5px;
 }

@@ -8,7 +8,7 @@ const arrimp = require("../scripts/arrayManipulation");
 router.get("/", async (req, res) => {
   try {
     // Fetches a message list and its associated messages from the database
-    messageList = await MessageList.findById(
+    let messageList = await MessageList.findById(
       "64d6943f0177deb9a064f179"
     ).populate("messages");
 
