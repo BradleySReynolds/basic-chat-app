@@ -93,7 +93,6 @@ label {
 
 .submit-btn:hover {
   background-color: #888;
-  color: white;
   transition: all 0.4s ease-in-out;
 }
 
@@ -119,8 +118,18 @@ label {
 }
 
 @media screen and (max-width: 500px) {
+  .username {
+    white-space: initial;
+  }
+
+  .message-list-item {
+    width: 100%;
+  }
+
   .message-list {
     width: 95%;
+    padding: 10px;
+    overflow-x: hidden;
   }
 
   .message-list {
